@@ -1,4 +1,4 @@
-package com.ekaterinabaygin.home
+package com.ekaterinabaygin.home.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

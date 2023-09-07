@@ -18,6 +18,7 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
     }
 
     buildTypes {
@@ -52,6 +53,8 @@ android {
 
 dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("androidx.recyclerview:recyclerview:1.3.1")
     annotationProcessor("io.realm:realm-android:6.2.0")
     implementation("androidx.lifecycle:lifecycle-view-model-ktx:2.6.1")
     implementation("io.ktor:ktor-client-android:1.7.4")
@@ -77,4 +80,12 @@ dependencies {
     implementation("io.reactivex.rxjava3:rxjava:3.1.5")
     implementation("com.squareup.retrofit2:adapter-rxjava3:2.9.0")
     implementation("androidx.room:room-rxjava3:2.5.2")
+
+    implementation ("com.google.dagger:hilt-android:2.40.5")
+
+    implementation ("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
+
+
 }

@@ -1,10 +1,11 @@
-package com.ekaterinabaygin.home
+package com.ekaterinabaygin.home.dataBase
 
-import Door
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.ekaterinabaygin.home.entity.Camera
+import com.ekaterinabaygin.home.entity.Door
 
 @Database(entities = [Camera::class, Door::class], version = 1, exportSchema = false)
 abstract class VideosDatabase : RoomDatabase() {
@@ -24,8 +25,7 @@ abstract class VideosDatabase : RoomDatabase() {
                         context.applicationContext,
                         VideosDatabase::class.java,
                         "videos_database"
-                    ).fallbackToDestructiveMigration().build()
-                    INSTANCE = instance
+                    ).build()
                 }
                 return instance
             }
