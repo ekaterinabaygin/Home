@@ -1,6 +1,7 @@
-package com.ekaterinabaygin.home
+package com.ekaterinabaygin.home.remote
 
-import Door
+import com.ekaterinabaygin.home.entity.Door
+import com.ekaterinabaygin.home.entity.Camera
 import retrofit2.http.GET
 
 interface ApiService {

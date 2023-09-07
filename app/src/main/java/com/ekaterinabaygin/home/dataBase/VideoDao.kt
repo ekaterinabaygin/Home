@@ -1,6 +1,8 @@
-package com.ekaterinabaygin.home
+package com.ekaterinabaygin.home.dataBase
 
 import androidx.room.*
+import com.ekaterinabaygin.home.entity.Video
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface VideoDao {
@@ -8,11 +10,11 @@ interface VideoDao {
     suspend fun insertAll(videos: List<Video>)
 
     @Query("SELECT * FROM video")
-    suspend fun getAllVideos(): List<Video>
+    fun getAllVideos(): Flow<List<Video>>
 
     @Query("SELECT * FROM video WHERE type = :type")
-    suspend fun getVideosByType(type: String): List<Video>
+    fun getVideosByType(type: String): Flow<List<Video>>
 
     @Query("UPDATE video SET name = :newName WHERE id = :videoId")
-    suspend fun updateVideoName(videoId: Int, newName: String)
+    suspend fun updateVideoName(videoId: String, newName: String)
 }

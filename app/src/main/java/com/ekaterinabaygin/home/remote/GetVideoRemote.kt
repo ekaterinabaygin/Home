@@ -1,10 +1,11 @@
-package com.ekaterinabaygin.home
+package com.ekaterinabaygin.home.remote
 
-import Door
+import com.ekaterinabaygin.home.entity.Door
+import com.ekaterinabaygin.home.entity.Camera
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object ApiClient {
+object GetVideoRemote {
     private val retrofit = Retrofit.Builder()
         .baseUrl("http://cars.cprogroup.ru/api/rubetek/")
         .addConverterFactory(GsonConverterFactory.create())
